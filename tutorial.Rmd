@@ -1,0 +1,33 @@
+---
+title: "Inferring Coevolution - UNDER CONSTUCTION!!"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cosmo
+    css: style.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+This is a tutorial for employing the method of coevolutionary inference described in [Week & Nuismer 2017](weeknuismer17.html). Data used in this tutorial is available [here](https://github.com/bobweek/inferring.coevolution).
+
+
+
+## Phenotypic data
+
+## Background parameters
+
+### $n_i$
+
+### $G_i$
+
+### $\theta_i$
+
+## Estimating Selection
+
+## Hypothesis Testing
