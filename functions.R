@@ -44,41 +44,41 @@ ml_sol <- function(mu1,mu2,V1,V2,C,n1,n2,th1,th2,G1,G2){
   A1 <- (-(G2*(n1)^2*(C - V1)*V1*((C)^2*(th1 - mu1) + (V1)^2*(-th2 + mu2) + C*V1*(-th1 + th2 - mu1 + mu2))) + 
            G1*n1*n2*V1*(V1*(V2)^2*(th1 - 2*th2 + 3*mu1 - 2*mu2) + (C)^3*(-th2 + mu2) + (C)^2*(V1*(-th2 + mu2) + V2*(th1 + th2 - 3*mu1 + mu2)) - C*V2*(V2*(th1 - mu1) + V1*(th1 - 3*th2 + mu1 + mu2))) + 
            C*sqrt((n1)^2*(4*C*G1*n2*(G2*n1*V1 + G1*n2*V2)*((C)^2 - V1*V2)*(th1 - mu1)*(C*(V2*(-th1 + mu1) + V1*(th2 - mu2)) + V1*V2*(th1 - th2 + mu1 - mu2)) + 
-                                 (G1*n2*V1*(V2)^2*(-th1 + mu1) - C*V1*(G2*n1*V1 + G1*n2*V2)*(th1 - th2 + mu1 - mu2) + G2*n1*(V1)^3*(-th2 + mu2) + 
-                                         (C)^2*(G2*n1*V1*(th1 - mu1) + G1*n2*(2*V2*th1 - V1*th2 - 2*V2*mu1 + V1*mu2)))^2)) - 
+                            (G1*n2*V1*(V2)^2*(-th1 + mu1) - C*V1*(G2*n1*V1 + G1*n2*V2)*(th1 - th2 + mu1 - mu2) + G2*n1*(V1)^3*(-th2 + mu2) + 
+                               (C)^2*(G2*n1*V1*(th1 - mu1) + G1*n2*(2*V2*th1 - V1*th2 - 2*V2*mu1 + V1*mu2)))^2)) - 
            V1*sqrt((n1)^2*(4*C*G1*n2*(G2*n1*V1 + G1*n2*V2)*((C)^2 - V1*V2)*(th1 - mu1)*(C*(V2*(-th1 + mu1) + V1*(th2 - mu2)) + V1*V2*(th1 - th2 + mu1 - mu2)) + 
-                                  (G1*n2*V1*(V2)^2*(-th1 + mu1) - C*V1*(G2*n1*V1 + G1*n2*V2)*(th1 - th2 + mu1 - mu2) + G2*n1*(V1)^3*(-th2 + mu2) + 
-                                          (C)^2*(G2*n1*V1*(th1 - mu1) + G1*n2*(2*V2*th1 - V1*th2 - 2*V2*mu1 + V1*mu2)))^2)))/
+                             (G1*n2*V1*(V2)^2*(-th1 + mu1) - C*V1*(G2*n1*V1 + G1*n2*V2)*(th1 - th2 + mu1 - mu2) + G2*n1*(V1)^3*(-th2 + mu2) + 
+                                (C)^2*(G2*n1*V1*(th1 - mu1) + G1*n2*(2*V2*th1 - V1*th2 - 2*V2*mu1 + V1*mu2)))^2)))/
     (4.*G1*(n1)^2*n2*V1*(-(C)^2 + V1*V2)*(C*(V2*(-th1 + mu1) + V1*(th2 - mu2)) + V1*V2*(th1 - th2 + mu1 - mu2)))
   
   A2 <- (G1*n1*n2*V1*(C - V2)*((V2)^2*(-th1 + mu1) + (C)^2*(th2 - mu2) + C*V2*(th1 - th2 + mu1 - mu2)) + 
            G2*(n1)^2*V1*((C)^3*(th1 - mu1) - (C)^2*(V2*(-th1 + mu1) + V1*(th1 + th2 + mu1 - 3*mu2)) + (V1)^2*V2*(2*th1 - th2 + 2*mu1 - 3*mu2) + C*V1*(V1*(th2 - mu2) + V2*(-3*th1 + th2 + mu1 + mu2))) - 
            C*sqrt((n1)^2*(4*C*G1*n2*(G2*n1*V1 + G1*n2*V2)*((C)^2 - V1*V2)*(th1 - mu1)*(C*(V2*(-th1 + mu1) + V1*(th2 - mu2)) + V1*V2*(th1 - th2 + mu1 - mu2)) + 
-                                 (G1*n2*V1*(V2)^2*(-th1 + mu1) - C*V1*(G2*n1*V1 + G1*n2*V2)*(th1 - th2 + mu1 - mu2) + G2*n1*(V1)^3*(-th2 + mu2) + 
-                                         (C)^2*(G2*n1*V1*(th1 - mu1) + G1*n2*(2*V2*th1 - V1*th2 - 2*V2*mu1 + V1*mu2)))^2)) + 
+                            (G1*n2*V1*(V2)^2*(-th1 + mu1) - C*V1*(G2*n1*V1 + G1*n2*V2)*(th1 - th2 + mu1 - mu2) + G2*n1*(V1)^3*(-th2 + mu2) + 
+                               (C)^2*(G2*n1*V1*(th1 - mu1) + G1*n2*(2*V2*th1 - V1*th2 - 2*V2*mu1 + V1*mu2)))^2)) + 
            V2*sqrt((n1)^2*(4*C*G1*n2*(G2*n1*V1 + G1*n2*V2)*((C)^2 - V1*V2)*(th1 - mu1)*(C*(V2*(-th1 + mu1) + V1*(th2 - mu2)) + V1*V2*(th1 - th2 + mu1 - mu2)) + 
-                                  (G1*n2*V1*(V2)^2*(-th1 + mu1) - C*V1*(G2*n1*V1 + G1*n2*V2)*(th1 - th2 + mu1 - mu2) + G2*n1*(V1)^3*(-th2 + mu2) + 
-                                          (C)^2*(G2*n1*V1*(th1 - mu1) + G1*n2*(2*V2*th1 - V1*th2 - 2*V2*mu1 + V1*mu2)))^2)))/
+                             (G1*n2*V1*(V2)^2*(-th1 + mu1) - C*V1*(G2*n1*V1 + G1*n2*V2)*(th1 - th2 + mu1 - mu2) + G2*n1*(V1)^3*(-th2 + mu2) + 
+                                (C)^2*(G2*n1*V1*(th1 - mu1) + G1*n2*(2*V2*th1 - V1*th2 - 2*V2*mu1 + V1*mu2)))^2)))/
     (4.*G2*(n1)^2*n2*V1*(-(C)^2 + V1*V2)*(C*(V2*(-th1 + mu1) + V1*(th2 - mu2)) + V1*V2*(th1 - th2 + mu1 - mu2)))
   
   B1 <- (G2*(n1)^2*V1*((C)^2*(th1 - mu1) + (V1)^2*(-th2 + mu2) + C*V1*(-th1 + th2 - mu1 + mu2)) + 
            G1*n1*n2*(V1*(V2)^2*(-th1 + mu1) + C*V1*V2*(-th1 + th2 - mu1 + mu2) + (C)^2*(2*V2*(th1 - mu1) + V1*(-th2 + mu2))) - 
            sqrt((n1)^2*(4*C*G1*n2*(G2*n1*V1 + G1*n2*V2)*((C)^2 - V1*V2)*(th1 - mu1)*(C*(V2*(-th1 + mu1) + V1*(th2 - mu2)) + V1*V2*(th1 - th2 + mu1 - mu2)) + 
-                               (G1*n2*V1*(V2)^2*(-th1 + mu1) - C*V1*(G2*n1*V1 + G1*n2*V2)*(th1 - th2 + mu1 - mu2) + G2*n1*(V1)^3*(-th2 + mu2) + 
-                                       (C)^2*(G2*n1*V1*(th1 - mu1) + G1*n2*(2*V2*th1 - V1*th2 - 2*V2*mu1 + V1*mu2)))^2)))/
+                          (G1*n2*V1*(V2)^2*(-th1 + mu1) - C*V1*(G2*n1*V1 + G1*n2*V2)*(th1 - th2 + mu1 - mu2) + G2*n1*(V1)^3*(-th2 + mu2) + 
+                             (C)^2*(G2*n1*V1*(th1 - mu1) + G1*n2*(2*V2*th1 - V1*th2 - 2*V2*mu1 + V1*mu2)))^2)))/
     (4.*G1*(n1)^2*n2*((C)^2 - V1*V2)*(C*(V2*(-th1 + mu1) + V1*(th2 - mu2)) + V1*V2*(th1 - th2 + mu1 - mu2)))
   
   B2 <- (G1*n1*n2*V1*V2*((V2)^2*(-th1 + mu1) + (C)^2*(th2 - mu2) + C*V2*(th1 - th2 + mu1 - mu2)) + 
            G2*(n1)^2*V1*((C)^2*(V2*(-th1 + mu1) + 2*V1*(th2 - mu2)) + C*V1*V2*(th1 - th2 + mu1 - mu2) + (V1)^2*V2*(-th2 + mu2)) - 
            V2*sqrt((n1)^2*(4*C*G1*n2*(G2*n1*V1 + G1*n2*V2)*((C)^2 - V1*V2)*(th1 - mu1)*(C*(V2*(-th1 + mu1) + V1*(th2 - mu2)) + V1*V2*(th1 - th2 + mu1 - mu2)) + 
-                                  (G1*n2*V1*(V2)^2*(-th1 + mu1) - C*V1*(G2*n1*V1 + G1*n2*V2)*(th1 - th2 + mu1 - mu2) + G2*n1*(V1)^3*(-th2 + mu2) + 
-                                          (C)^2*(G2*n1*V1*(th1 - mu1) + G1*n2*(2*V2*th1 - V1*th2 - 2*V2*mu1 + V1*mu2)))^2)))/
+                             (G1*n2*V1*(V2)^2*(-th1 + mu1) - C*V1*(G2*n1*V1 + G1*n2*V2)*(th1 - th2 + mu1 - mu2) + G2*n1*(V1)^3*(-th2 + mu2) + 
+                                (C)^2*(G2*n1*V1*(th1 - mu1) + G1*n2*(2*V2*th1 - V1*th2 - 2*V2*mu1 + V1*mu2)))^2)))/
     (4.*G2*(n1)^2*n2*V1*(-(C)^2 + V1*V2)*(C*(V2*(-th1 + mu1) + V1*(th2 - mu2)) + V1*V2*(th1 - th2 + mu1 - mu2)))
   
   k <- (-(G1*n1*n2*V1*(C - V2)*(V2*(-th1 + mu1) + C*(th2 - mu2))) - G2*(n1)^2*(C - V1)*V1*(C*(th1 - mu1) + V1*(-th2 + mu2)) + 
           sqrt((n1)^2*(4*C*G1*n2*(G2*n1*V1 + G1*n2*V2)*((C)^2 - V1*V2)*(th1 - mu1)*(C*(V2*(-th1 + mu1) + V1*(th2 - mu2)) + V1*V2*(th1 - th2 + mu1 - mu2)) + 
-                              (G1*n2*V1*(V2)^2*(-th1 + mu1) - C*V1*(G2*n1*V1 + G1*n2*V2)*(th1 - th2 + mu1 - mu2) + G2*n1*(V1)^3*(-th2 + mu2) + 
-                                      (C)^2*(G2*n1*V1*(th1 - mu1) + G1*n2*(2*V2*th1 - V1*th2 - 2*V2*mu1 + V1*mu2)))^2)))/(2.*C*n1*V1*(G2*n1*V1 + G1*n2*V2))
+                         (G1*n2*V1*(V2)^2*(-th1 + mu1) - C*V1*(G2*n1*V1 + G1*n2*V2)*(th1 - th2 + mu1 - mu2) + G2*n1*(V1)^3*(-th2 + mu2) + 
+                            (C)^2*(G2*n1*V1*(th1 - mu1) + G1*n2*(2*V2*th1 - V1*th2 - 2*V2*mu1 + V1*mu2)))^2)))/(2.*C*n1*V1*(G2*n1*V1 + G1*n2*V2))
   
   names(A1) <- NULL
   names(A2) <- NULL
@@ -90,6 +90,28 @@ ml_sol <- function(mu1,mu2,V1,V2,C,n1,n2,th1,th2,G1,G2){
   return(ML_sol)
   
 }
+
+
+ml_sol_k0 <- function(mu1,mu2,V1,V2,C,n1,n2,th1,th2,G1,G2){
+  
+  A1 <- (mu2-mu1)/(2*n1*(V1*(mu2-th1)-C*(mu1-th1)))
+  
+  A2 <- (mu1-mu2)/(2*n2*(V2*(mu1-th2)-C*(mu2-th2)))
+  
+  B1 <- (mu1-th1)/(2*n1*(V1*(mu2-th1)-C*(mu1-th1)))
+  
+  B2 <- (mu2-th2)/(2*n2*(V2*(mu1-th2)-C*(mu2-th2)))
+  
+  names(A1) <- NULL
+  names(A2) <- NULL
+  names(B1) <- NULL
+  names(B2) <- NULL
+  ML_sol <- list(A1,A2,B1,B2,0)
+  names(ML_sol) <- c("A1","A2","B1","B2","k")
+  return(ML_sol)
+  
+}
+
 
 mu <- function(A1,A2,B1,B2,k,n1,n2,th1,th2){
   
