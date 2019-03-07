@@ -11,7 +11,7 @@ Repository also includes original scripts used to produce figures and results of
   - __power_sample.R:__ script generates statistical power of our method as a function of sample size.
   - __power_strength.R:__ script generates statistical power of our method as a function of strength of coevolution.
   - __type1_sample.R:__ script generates type-1 error rate of our method as a function of sample size.
-  - __type1_sample.R:__ script generates type-1 error rate of our method as a function of unilateral selection strength.
+  - __type1_strength.R:__ script generates type-1 error rate of our method as a function of unilateral selection strength.
   - __regression_sample.R:__ script generates linear regression statistics of our method as a function of sample size.
   - __nn__: folder contains scripts used to analyze perfomance of method under non-normal data.
   - __gf__: folder contains scripts used to analyze perfomance of method in the presence of gene-flow.
